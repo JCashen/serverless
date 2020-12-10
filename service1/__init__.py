@@ -5,16 +5,16 @@ from azure.cosmos import CosmosClient
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
-    letterstring = requests.get('https://randostring.azurewebsites.net/api/service2?code=0PIZjZ5krmmlkIeoW1vwD40ezvlnUUWgIQYe3kLneP/BAoAkTa0TDA==').text
-    nostring = requests.get('https://randostring.azurewebsites.net/api/service2?code=0PIZjZ5krmmlkIeoW1vwD40ezvlnUUWgIQYe3kLneP/BAoAkTa0TDA==').text
+    letterstring = requests.get('https://functionapp1234.azurewebsites.net/api/service2?code=Fg4mg5mnVSTr3Zs/7BJVuzsSIHctxxaH25VzdRgCUqSmEyg/FjODxw==').text
+    nostring = requests.get('https://functionapp1234.azurewebsites.net/api/service3?code=pm8FENfrjttUjop6n3xCx0n/AtWX7Lq9DNJbRtACX5i2dU3ekmqGsw==').text
     
     username = ""
     for i in range(5):
         username += letterstring[i]
         username += nostring[i]
     
-    endpoint = "https://george-rhodes.documents.azure.com:443/"
-    key = "kILpCMZAwpelpDZMAxawxHM7pgETsCi4kiWY1qB9XZMP3CaHfCw74LUEZeWMwsLtEEmd6Vfmi6iMcJuvEyghIg=="
+    endpoint = ""
+    key = "k"
     client = CosmosClient(endpoint, key)
 
     database_name = "name"
